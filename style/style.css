@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+.main {
+  width: 100%;
+  height: 100vh;
+  background: #F0C4FF;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F0C4FF), to(#FFBDBD));
+  background: linear-gradient(to bottom, #F0C4FF, #FFBDBD);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app {
+  width: 590px;
+  height: 700px;
+  background-color: #FFFFFF;
+  border-radius: 44px;
+  margin: 10px;
+  -webkit-box-shadow: 13px 13px 50px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 13px 13px 50px 0px rgba(0, 0, 0, 0.2);
+  padding: 50px;
+}
+
+.app__h1 {
+  color: #F0C4FF;
+  display: inline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 26px;
+  border-bottom: 1px solid #E1E1E1;
+  padding-bottom: 40px;
+}
+
+.input {
+  border-bottom: 1px solid #E1E1E1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.input__field {
+  width: 100%;
+  font-size: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.input__field::-webkit-input-placeholder {
+  color: #E1E1E1;
+}
+
+.input__field::-moz-placeholder {
+  color: #E1E1E1;
+}
+
+.input__field:-ms-input-placeholder {
+  color: #E1E1E1;
+}
+
+.input__field::-ms-input-placeholder {
+  color: #E1E1E1;
+}
+
+.input__field::placeholder {
+  color: #E1E1E1;
+}
