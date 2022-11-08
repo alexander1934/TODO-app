@@ -123,6 +123,9 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .input__field {
@@ -150,4 +153,58 @@ h1, h2, h3, h4, h5, h6 {
 
 .input__field::placeholder {
   color: #E1E1E1;
+}
+
+.input__button {
+  background-color: #FFFFFF;
+  color: #e69aff;
+  font-size: 42px;
+  font-weight: 200;
+  display: inline;
+}
+
+.input__button:hover {
+  color: #9400c5;
+}
+
+.todo__item {
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+}
+
+.button-block__item_completed {
+  border: 1px solid #000000;
+  height: 25px;
+  width: 25px;
+  border-radius: 100px;
+  color: #FFFFFF;
+  margin-right: 10px;
+}
+
+.button-block__item_completed:hover {
+  border-color: #2bff00;
+}
+
+.svg {
+  width: 24px;
+  height: 24px;
+  background-color: #FFFFFF;
+  pointer-events: none;
+}
+
+.button-block__item_delete {
+  background-color: #FFFFFF;
+}
+
+.button-block__item_delete:hover {
+  fill: #ff0000;
 }
