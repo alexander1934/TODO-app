@@ -1,7 +1,6 @@
 let text = document.querySelector(".input__field");
 let addButton = document.querySelector(".input__button");
 let todo = document.querySelector(".todo");
-let deleteButton = document.querySelector(".button-block__item_delete");
 
 // Добавление пункта
 
@@ -32,5 +31,17 @@ function removeItem(event) {
   if (event.target.dataset.action === 'delete'){
     let parent = event.target.closest('.todo__item')
     parent.remove()
+  }
+}
+
+// Зачеркивание выполненной задачи
+
+todo.addEventListener('click', crossOutItem);
+
+function crossOutItem (event) {
+  if (event.target.dataset.action === 'completed') {
+    let parent = event.target.closest(".todo__item");
+    let p = parent.querySelector(".todo__p");
+    p.classList.add("todo__p_strike")
   }
 }
