@@ -167,6 +167,23 @@ h1, h2, h3, h4, h5, h6 {
   color: #9400c5;
 }
 
+.todo {
+  height: 450px;
+  overflow-y: overlay;
+  margin-right: -25px;
+  padding-right: 25px;
+}
+
+.todo::-webkit-scrollbar {
+  width: 3px;
+  background-color: #ffffff;
+}
+
+.todo::-webkit-scrollbar-thumb {
+  background-color: #E1E1E1;
+  border-radius: 40px;
+}
+
 .todo__item {
   padding: 40px 0;
   display: -webkit-box;

@@ -6,7 +6,16 @@ let todo = document.querySelector(".todo");
 
 addButton.addEventListener("click", addItem);
 
+text.addEventListener("keypress", (event) => {
+  if (event.key === "Enter"){
+    addItem();
+  }
+})
+
 function addItem(){
+  if (text.value === ""){
+    return
+  }
   let valueHTML = `<div class="todo__item">
   <p class="todo__p">${text.value}</p>
   <div class="button-block">
@@ -18,7 +27,7 @@ function addItem(){
       </button>
   </div>
 </div>`;
-  todo.insertAdjacentHTML('beforeend', valueHTML)
+  todo.insertAdjacentHTML('beforeend', valueHTML);
   text.value = "";
   text.focus();
 }
@@ -42,6 +51,6 @@ function crossOutItem (event) {
   if (event.target.dataset.action === 'completed') {
     let parent = event.target.closest(".todo__item");
     let p = parent.querySelector(".todo__p");
-    p.classList.add("todo__p_strike")
+    p.classList.toggle("todo__p_strike");
   }
 }
