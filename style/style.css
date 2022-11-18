@@ -168,7 +168,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .todo {
-  height: 450px;
+  height: 400px;
   overflow-y: overlay;
   margin-right: -25px;
   padding-right: 25px;
@@ -233,4 +233,40 @@ h1, h2, h3, h4, h5, h6 {
 
 .button-block__item_delete:hover {
   fill: #ff0000;
+}
+
+.control-buttons {
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.control-buttons__item_1 {
+  background-color: #FFFFFF;
+  font-size: 16px;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  margin-left: 0;
+}
+.control-buttons__item_1:hover {
+  color: #2bff00;
+  margin-left: -10px;
+}
+
+.control-buttons__item_2 {
+  background-color: #FFFFFF;
+  font-size: 16px;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  margin-right: 0;
+}
+.control-buttons__item_2:hover {
+  color: #ff0000;
+  margin-right: -10px;
 }

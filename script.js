@@ -2,6 +2,8 @@
 let text = document.querySelector(".input__field");
 let addButton = document.querySelector(".input__button");
 let todo = document.querySelector(".todo");
+let deleteDoneButton = document.querySelector(".control-buttons__item_1");
+let deleteButton = document.querySelector(".control-buttons__item_2");
 
 //  Массив с задачами и манипуляция с localStorage
 let tasks = [];
@@ -41,6 +43,12 @@ todo.addEventListener("click", removeItem);
 
 // Зачеркивание выполненной задачи
 todo.addEventListener("click", crossOutItem);
+
+//Удаление выполненного
+deleteDoneButton.addEventListener("click", deleteDone)
+
+//Удаление всего
+deleteButton.addEventListener("click", deleteAll)
 
 //Функции
 function addItem() {
@@ -118,4 +126,36 @@ function crossOutItem(event) {
 
 function saveToLocalStorage() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function deleteAll (event) {
+  console.log("click")
+  let parent = event.target.closest(".app");
+  let item = parent.querySelectorAll(".todo__item");
+  item.forEach( e => e.remove() );
+  tasks = [];
+  saveToLocalStorage();
+}
+
+function deleteDone (event){
+  let parent = event.target.closest(".app");
+  let item = parent.getElementsByClassName("todo__p_strike");
+  let itemArray = Array.from(item);
+  // let todoItem = itemArray.forEach(elem => elem.closest(".todo__item"));
+
+  
+
+  for ( let i = 0; i<itemArray.length; i++){
+    let abc = itemArray[i].closest(".todo__item")
+    abc.remove();
+    const index = tasks.findIndex((task) => {
+      if (abc.done == true) {
+        return true;
+      }
+    });
+
+    //Удаление из элемента из массива
+    tasks.splice(index, 1);
+  }
+  saveToLocalStorage();
 }
