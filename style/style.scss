@@ -45,12 +45,17 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     width: 100%;
     height: 100vh;
     background: #F0C4FF;
-    background: -webkit-linear-gradient(top, #F0C4FF, #FFBDBD);
-    background: -moz-linear-gradient(top, #F0C4FF, #FFBDBD);
-    background: linear-gradient(to bottom, #F0C4FF, #FFBDBD);
+    background: rgb(255,229,240);
+    background: linear-gradient(90deg, rgba(255,229,240,1) 0%, rgba(205,255,247,1) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.themes__item {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #FFFFFF;
 }
 
 .app {
@@ -130,6 +135,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 .todo__p {
     text-decoration: none;
+    width: 70%;
+    overflow-wrap: break-word;
 }
 
 .todo__p_strike {

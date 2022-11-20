@@ -141,9 +141,6 @@ function deleteDone (event){
   let parent = event.target.closest(".app");
   let item = parent.getElementsByClassName("todo__p_strike");
   let itemArray = Array.from(item);
-  // let todoItem = itemArray.forEach(elem => elem.closest(".todo__item"));
-
-  
 
   for ( let i = 0; i<itemArray.length; i++){
     let abc = itemArray[i].closest(".todo__item")
