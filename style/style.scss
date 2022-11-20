@@ -37,6 +37,8 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+
 @mixin border {
     border-bottom: 1px solid #E1E1E1;
 }
@@ -50,6 +52,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Inter";
 }
 
 .themes__item {
